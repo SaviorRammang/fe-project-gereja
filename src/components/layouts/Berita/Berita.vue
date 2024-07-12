@@ -6,9 +6,6 @@
         <div class="row d-flex justify-content-center text-center">
           <div class="col-lg-8">
             <h1 class="text-white">Berita</h1>
-            <p class="mb-0 text-white">
-              Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.
-            </p>
           </div>
         </div>
       </div>
@@ -26,23 +23,47 @@
 
   <div class="container my-5">
     <h5 class="form-label fw-bold">Cari Berita</h5>
-    <form @submit.prevent="searchEvent" class="row mb-5 mt-3 text-center align-items-center">
+    <form
+      @submit.prevent="searchEvent"
+      class="row mb-5 mt-3 text-center align-items-center"
+    >
       <div class="mb-4 col-md-4">
-        <input type="text" class="form-control" name="tgl_awal" id="tgl_awal" v-model="search" />
+        <input
+          type="text"
+          class="form-control"
+          name="tgl_awal"
+          id="tgl_awal"
+          v-model="search"
+        />
       </div>
       <div class="mb-4 col-md-1">
         <button type="submit" class="btn btn-danger">Cari</button>
       </div>
     </form>
     <div class="row gy-4">
-      <div class="col-xl-4 col-md-6" v-for="(nw, index) in news" data-aos="fade-up" data-aos-delay="100" :key="index">
+      <div
+        class="col-xl-4 col-md-6"
+        v-for="(nw, index) in news"
+        data-aos="fade-up"
+        data-aos-delay="100"
+        :key="index"
+      >
         <div class="card">
-          <img class="card-img-top img-thumbnail" style="height: 250px" :src="imageUrl + nw.foto" alt="Card image" />
+          <img
+            class="card-img-top img-thumbnail"
+            style="height: 250px"
+            :src="imageUrl + nw.foto"
+            alt="Card image"
+          />
           <div class="card-body">
             <h4 class="card-title">{{ nw.judul }}</h4>
             <p class="card-text">{{ nw.subjudul }}</p>
             <p class="card-text" v-html="nw.isi.substring(0, 150) + '...'"></p>
-            <router-link :to="{ name: 'BeritaDetail', params: { id: nw.id } }" class="btn btn-sm btn-danger">Detail</router-link>
+            <router-link
+              :to="{ name: 'BeritaDetail', params: { id: nw.id } }"
+              class="btn btn-sm btn-danger"
+              >Detail</router-link
+            >
           </div>
         </div>
       </div>
