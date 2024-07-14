@@ -5,7 +5,7 @@
       <div class="container mt-5">
         <div class="row d-flex justify-content-center text-center">
           <div class="col-lg-8">
-            <h1 class="text-white">Jadwal Konseling</h1>
+            <h1 class="text-white">Booking Konselor</h1>
           </div>
         </div>
       </div>
@@ -14,7 +14,7 @@
       <div class="container">
         <ol>
           <li><router-link to="/">Home</router-link></li>
-          <li class="current">Jadwal Konseling</li>
+          <li class="current">Booking Konselor</li>
         </ol>
       </div>
     </nav>
@@ -28,18 +28,44 @@
       <div class="col-md-6 col-sm-12">
         <div class="mb-4">
           <label for="pendeta_id" class="form-label fw-bold">Pendeta</label>
-          <select class="form-select" name="pendeta_id" aria-label="Pendeta" required v-model="data.pendeta_id">
+          <select
+            class="form-select"
+            name="pendeta_id"
+            aria-label="Pendeta"
+            required
+            v-model="data.pendeta_id"
+          >
             <option value="">Pilih Pendeta</option>
-            <option v-for="(pendeta, index) in pendetas" :key="index" :value="pendeta.id">{{ pendeta.name }}</option>
+            <option
+              v-for="(pendeta, index) in pendetas"
+              :key="index"
+              :value="pendeta.id"
+            >
+              {{ pendeta.name }}
+            </option>
           </select>
         </div>
         <div class="mb-4">
           <label for="tanggal" class="form-label fw-bold">Tanggal</label>
-          <input type="date" class="form-control" name="tanggal" id="tanggal" :min="minDate" required v-model="data.tanggal" />
+          <input
+            type="date"
+            class="form-control"
+            name="tanggal"
+            id="tanggal"
+            :min="minDate"
+            required
+            v-model="data.tanggal"
+          />
         </div>
         <div class="mb-4">
           <label for="waktu" class="form-label fw-bold">Waktu</label>
-          <select class="form-select" name="waktu" aria-label="Waktu" required v-model="data.waktu">
+          <select
+            class="form-select"
+            name="waktu"
+            aria-label="Waktu"
+            required
+            v-model="data.waktu"
+          >
             <option value="">Pilih Waktu</option>
             <option value="08:00:00">08:00</option>
             <option value="09:00:00">09:00</option>
@@ -54,11 +80,25 @@
       <div class="col-md-6 col-sm-12">
         <div class="mb-4">
           <label for="pesan" class="form-label fw-bold">Pesan</label>
-          <textarea name="pesan" id="pesan" class="form-control" rows="5" style="resize: none" required v-model="data.pesan"></textarea>
+          <textarea
+            name="pesan"
+            id="pesan"
+            class="form-control"
+            rows="5"
+            style="resize: none"
+            required
+            v-model="data.pesan"
+          ></textarea>
         </div>
       </div>
       <div class="col-12 d-flex justify-content-end">
-        <button type="submit" class="btn btn-danger daftar" :disabled="isSubmitting">Daftar</button>
+        <button
+          type="submit"
+          class="btn btn-danger daftar"
+          :disabled="isSubmitting"
+        >
+          Daftar
+        </button>
       </div>
     </form>
   </div>
@@ -107,7 +147,7 @@ export default {
       const month = String(tomorrow.getMonth() + 1).padStart(2, "0");
       const day = String(tomorrow.getDate()).padStart(2, "0");
       return `${year}-${month}-${day}`;
-    }
+    },
   },
 
   mounted() {

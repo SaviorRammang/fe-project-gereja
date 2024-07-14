@@ -4,10 +4,13 @@
       <div class="container mt-5">
         <div class="row d-flex justify-content-center text-center">
           <div class="col-lg-8">
-            <h1 class="text-white">Profile</h1>
-            <p class="mb-0 text-white">
-              Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.
-            </p>
+            <h1 class="text-white">Profile Jemaat</h1>
+            <!-- <p class="mb-0 text-white">
+              Odio et unde deleniti. Deserunt numquam exercitationem. Officiis
+              quo odio sint voluptas consequatur ut a odio voluptatem. Sit
+              dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit
+              quaerat ipsum dolorem.
+            </p> -->
           </div>
         </div>
       </div>
@@ -25,12 +28,21 @@
   <div class="container my-5">
     <div class="row">
       <div class="container-xl px-4 mt-4">
-        <div class="alert alert-danger" role="alert" v-if="Object.keys(errors).length > 0">
+        <div
+          class="alert alert-danger"
+          role="alert"
+          v-if="Object.keys(errors).length > 0"
+        >
           <ul>
-            <li v-for="(error, index) in errors" :key="index">{{ error[0] }}</li>
+            <li v-for="(error, index) in errors" :key="index">
+              {{ error[0] }}
+            </li>
           </ul>
         </div>
-        <form @submit.prevent="changeProfile" enctype="multipart/form-data mb-5">
+        <form
+          @submit.prevent="changeProfile"
+          enctype="multipart/form-data mb-5"
+        >
           <div class="row">
             <div class="col-xl-4">
               <!-- Profile picture card-->
@@ -38,42 +50,95 @@
                 <div class="card-header">Foto Profile</div>
                 <div class="card-body text-center">
                   <div v-if="user.photo != null">
-                    <img class="imgPreview img-profile mb-2" :src="imageUrl + user.photo" width="170" />
+                    <img
+                      class="imgPreview img-profile mb-2"
+                      :src="imageUrl + user.photo"
+                      width="170"
+                    />
                   </div>
                   <div v-else>
-                    <img class="imgPreview img-profile mb-2" :src="imageUrl + 'profilePicture/userDef.png'" width="170" />
+                    <img
+                      class="imgPreview img-profile mb-2"
+                      :src="imageUrl + 'profilePicture/userDef.png'"
+                      width="170"
+                    />
                   </div>
 
                   <div class="input-group mb-3">
-                    <input class="form-control mt-4" name="photo" type="file" id="imageFile" @change="handleFileUpload" />
+                    <input
+                      class="form-control mt-4"
+                      name="photo"
+                      type="file"
+                      id="imageFile"
+                      @change="handleFileUpload"
+                    />
                   </div>
-                  <div class="small font-italic text-muted mb-4">JPG, PNG, JPEG tidak lebih 2 MB</div>
+                  <div class="small font-italic text-muted mb-4">
+                    JPG, PNG, JPEG tidak lebih 2 MB
+                  </div>
                 </div>
               </div>
-              <div class="alert alert-danger" role="alert" v-if="Object.keys(error_pass).length > 0">
+              <div
+                class="alert alert-danger"
+                role="alert"
+                v-if="Object.keys(error_pass).length > 0"
+              >
                 <ul>
-                  <li v-for="(error, index) in error_pass" :key="index">{{ error[0] }}</li>
+                  <li v-for="(error, index) in error_pass" :key="index">
+                    {{ error[0] }}
+                  </li>
                 </ul>
               </div>
-              <form @submit.prevent="changePassword" enctype="multipart/form-data" class="mt-5">
+              <form
+                @submit.prevent="changePassword"
+                enctype="multipart/form-data"
+                class="mt-5"
+              >
                 <div class="card mb-4">
                   <div class="card-header">Ubah Password</div>
                   <div class="card-body">
                     <div class="mb-3">
-                      <label class="small mb-1" for="old_pass">Password Lama</label>
-                      <input class="form-control" type="password" v-model="pass.old_pass" required />
+                      <label class="small mb-1" for="old_pass"
+                        >Password Lama</label
+                      >
+                      <input
+                        class="form-control"
+                        type="password"
+                        v-model="pass.old_pass"
+                        required
+                      />
                     </div>
                     <div class="mb-3">
-                      <label class="small mb-1" for="new_pass">Password Baru</label>
-                      <input class="form-control" type="password" v-model="pass.new_pass" required />
+                      <label class="small mb-1" for="new_pass"
+                        >Password Baru</label
+                      >
+                      <input
+                        class="form-control"
+                        type="password"
+                        v-model="pass.new_pass"
+                        required
+                      />
                     </div>
                     <div class="mb-3">
-                      <label class="small mb-1" for="konf_pass">Konfirmasi Password Baru</label>
-                      <input class="form-control" type="password" v-model="pass.konf_pass" required />
+                      <label class="small mb-1" for="konf_pass"
+                        >Konfirmasi Password Baru</label
+                      >
+                      <input
+                        class="form-control"
+                        type="password"
+                        v-model="pass.konf_pass"
+                        required
+                      />
                     </div>
 
                     <div class="text-end mt-5">
-                      <button class="btn btn-danger pass" type="submit" :disabled="isSubmitting">Ubah</button>
+                      <button
+                        class="btn btn-danger pass"
+                        type="submit"
+                        :disabled="isSubmitting"
+                      >
+                        Ubah
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -85,44 +150,107 @@
                 <div class="card-body">
                   <div class="mb-3">
                     <label class="small mb-1" for="name">Nama</label>
-                    <input class="form-control" name="name" type="text" placeholder="Masukkan nama" required v-model="user.name" />
+                    <input
+                      class="form-control"
+                      name="name"
+                      type="text"
+                      placeholder="Masukkan nama"
+                      required
+                      v-model="user.name"
+                    />
                   </div>
 
                   <div class="mb-3">
-                    <label class="small mb-1" for="tempat_lahir">Tempat Lahir</label>
-                    <input class="form-control" name="tempat_lahir" type="text" placeholder="Masukkan tempat lahir" required v-model="user.tempat_lahir" />
+                    <label class="small mb-1" for="tempat_lahir"
+                      >Tempat Lahir</label
+                    >
+                    <input
+                      class="form-control"
+                      name="tempat_lahir"
+                      type="text"
+                      placeholder="Masukkan tempat lahir"
+                      required
+                      v-model="user.tempat_lahir"
+                    />
                   </div>
 
                   <div class="mb-3">
-                    <label class="small mb-1" for="tanggal_lahir">Tanggal Lahir</label>
-                    <input class="form-control" name="tanggal_lahir" type="date" placeholder="Masukkan tanggal lahir" required v-model="user.tanggal_lahir" />
+                    <label class="small mb-1" for="tanggal_lahir"
+                      >Tanggal Lahir</label
+                    >
+                    <input
+                      class="form-control"
+                      name="tanggal_lahir"
+                      type="date"
+                      placeholder="Masukkan tanggal lahir"
+                      required
+                      v-model="user.tanggal_lahir"
+                    />
                   </div>
 
                   <div class="mb-3">
                     <label for="rayon_id" class="small mb-1">Rayon</label>
-                    <select class="form-select" name="rayon_id" aria-label="Rayon Calon Istri" required v-model="user.rayon_id">
+                    <select
+                      class="form-select"
+                      name="rayon_id"
+                      aria-label="Rayon Calon Istri"
+                      required
+                      v-model="user.rayon_id"
+                    >
                       <option value="">Pilih Rayon</option>
-                      <option :value="rayon.id" :selected="user.rayon_id === rayon.id" v-for="rayon in rayons" :key="rayon.id">Rayon {{ rayon.nomor_rayon }}</option>
+                      <option
+                        :value="rayon.id"
+                        :selected="user.rayon_id === rayon.id"
+                        v-for="rayon in rayons"
+                        :key="rayon.id"
+                      >
+                        Rayon {{ rayon.nomor_rayon }}
+                      </option>
                     </select>
                   </div>
 
                   <div class="mb-3">
                     <label class="small mb-1" for="username">Username</label>
-                    <input class="form-control" name="username" type="text" required v-model="user.username" />
+                    <input
+                      class="form-control"
+                      name="username"
+                      type="text"
+                      required
+                      v-model="user.username"
+                    />
                   </div>
 
                   <div class="mb-3">
                     <label class="small mb-1" for="phone">No. Handphone</label>
-                    <input class="form-control" name="phone" type="number" :value="user.phone" required readonly />
+                    <input
+                      class="form-control"
+                      name="phone"
+                      type="number"
+                      :value="user.phone"
+                      required
+                      readonly
+                    />
                   </div>
 
                   <div class="mb-3">
                     <label class="small mb-1" for="email">Email</label>
-                    <input class="form-control" type="email" :value="user.email" disabled readonly />
+                    <input
+                      class="form-control"
+                      type="email"
+                      :value="user.email"
+                      disabled
+                      readonly
+                    />
                   </div>
 
                   <div class="text-end mt-5">
-                    <button class="btn btn-danger profil" type="submit" :disabled="isSubmitting">Simpan Perubahan</button>
+                    <button
+                      class="btn btn-danger profil"
+                      type="submit"
+                      :disabled="isSubmitting"
+                    >
+                      Simpan Perubahan
+                    </button>
                   </div>
                 </div>
               </div>
@@ -206,10 +334,12 @@ export default {
     const SECRET_KEY = "my_very_secret_key_12345";
     var bytes = CryptoJS.AES.decrypt(token, SECRET_KEY);
     var decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
-    axios.get(`${URL_BACKEND}/cek-login?id=${decryptedData[0].id}`).then((response) => {
-      console.log(response.data.data);
-      this.user = response.data.data;
-    });
+    axios
+      .get(`${URL_BACKEND}/cek-login?id=${decryptedData[0].id}`)
+      .then((response) => {
+        console.log(response.data.data);
+        this.user = response.data.data;
+      });
 
     axios.get(`${URL_BACKEND}/get-single-rayon`).then((response) => {
       console.log(response.data.data);

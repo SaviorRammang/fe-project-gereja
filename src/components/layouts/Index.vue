@@ -1,7 +1,7 @@
 <template>
   <!-- Hero Section - Home Page -->
   <section id="hero" class="hero">
-    <img src="/assets/img/foto_gereja.jpg" alt="" data-aos="fade-in" />
+    <img src="/assets/img/foto_gki.jpg" alt="" data-aos="fade-in" />
 
     <div class="container">
       <div class="row">
@@ -90,7 +90,7 @@
 
   <!-- Stats Section - Home Page -->
   <section id="stats" class="stats">
-    <img src="/assets/img/foto_gereja2.jpg" alt="" data-aos="fade-in" />
+    <img src="/assets/img/foto_gki.jpg" alt="" data-aos="fade-in" />
   </section>
   <!-- End Stats Section -->
 
@@ -232,7 +232,7 @@
 
   <!-- Stats Section - Home Page -->
   <section id="stats" class="stats">
-    <img src="/assets/img/foto_gereja3.jpg" alt="" data-aos="fade-in" />
+    <img src="/assets/img/foto_gki.jpg" alt="" data-aos="fade-in" />
   </section>
   <!-- End Stats Section -->
 
@@ -290,7 +290,7 @@
 
   <!-- Stats Section - Home Page -->
   <section id="stats" class="stats">
-    <img src="/assets/img/foto_gereja3.jpg" alt="" data-aos="fade-in" />
+    <img src="/assets/img/foto_gki.jpg" alt="" data-aos="fade-in" />
   </section>
   <!-- End Stats Section -->
 
@@ -350,11 +350,11 @@
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="content px-xl-5">
             <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
-            <p>
+            <!-- <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis
               aute irure dolor in reprehenderit
-            </p>
+            </p> -->
           </div>
         </div>
 
@@ -370,7 +370,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseOne"
                 >
-                  Accordion Item #1
+                  Apa itu gereja ?
                 </button>
               </h2>
               <div
@@ -380,9 +380,9 @@
                 data-bs-parent="#accordionFlushExample"
               >
                 <div class="accordion-body">
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the first item's accordion body.
+                  Gereja adalah komunitas umat Kristen yang berkumpul untuk
+                  beribadah, belajar, dan melayani Tuhan. Gereja juga merujuk
+                  pada bangunan tempat umat Kristen berkumpul untuk beribadah.
                 </div>
               </div>
             </div>
@@ -396,7 +396,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseTwo"
                 >
-                  Accordion Item #2
+                  Apa itu Alkitab ?
                 </button>
               </h2>
               <div
@@ -406,10 +406,11 @@
                 data-bs-parent="#accordionFlushExample"
               >
                 <div class="accordion-body">
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the second item's accordion body. Let's imagine this being
-                  filled with some actual content.
+                  Alkitab adalah kitab suci umat Kristen yang terdiri dari
+                  Perjanjian Lama dan Perjanjian Baru. Perjanjian Lama berisi
+                  kitab-kitab yang diakui oleh agama Yahudi, sementara
+                  Perjanjian Baru berisi tulisan-tulisan tentang kehidupan dan
+                  ajaran Yesus Kristus serta surat-surat dari para rasul.
                 </div>
               </div>
             </div>
@@ -423,7 +424,7 @@
                   aria-expanded="false"
                   aria-controls="flush-collapseThree"
                 >
-                  Accordion Item #3
+                  Apa itu pelayanan diakonia di GKI?
                 </button>
               </h2>
               <div
@@ -433,13 +434,10 @@
                 data-bs-parent="#accordionFlushExample"
               >
                 <div class="accordion-body">
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the third item's accordion body. Nothing more exciting
-                  happening here in terms of content, but just filling up the
-                  space to make it look, at least at first glance, a bit more
-                  representative of how this would look in a real-world
-                  application.
+                  Pelayanan diakonia di GKI adalah pelayanan sosial yang
+                  bertujuan untuk membantu mereka yang membutuhkan. Ini termasuk
+                  bantuan kemanusiaan, program kesehatan, pendidikan, dan
+                  pemberdayaan ekonomi.
                 </div>
               </div>
             </div>

@@ -25,24 +25,35 @@
     <div class="row g-5">
       <div class="col-md-6">
         <h3 class="fw-bold">Sejarah</h3>
-        <p v-html="sejarah"></p>
+        <p style="text-align: justify" v-html="sejarah"></p>
       </div>
       <div class="col-md-6">
         <h3 class="fw-bold">Visi</h3>
-        <p v-html="visi"></p>
+        <p style="text-align: justify" v-html="visi"></p>
         <h3 class="fw-bold">Misi</h3>
-        <p v-html="misi"></p>
+        <p style="text-align: justify" v-html="misi"></p>
       </div>
       <div class="container section-title mt-5" data-aos="fade-up">
         <h2>Masa Jabatan Pendeta</h2>
       </div>
       <div class="row">
-        <div class="col-md-4 text-center" v-for="(jabatan, index) in jabatans" :key="index">
+        <div
+          class="col-md-4 text-center"
+          v-for="(jabatan, index) in jabatans"
+          :key="index"
+        >
           <div class="img-container">
-            <img :src="imageUrl + jabatan.foto" :alt="jabatan.nama" class="img-thumbnail" />
+            <img
+              :src="imageUrl + jabatan.foto"
+              :alt="jabatan.nama"
+              class="img-thumbnail"
+            />
           </div>
           <h4 class="mt-3">{{ jabatan.nama }}</h4>
-          <h6>Masa Jabatan : {{ jabatan.awal_jabatan }} - {{ jabatan.akhir_jabatan }}</h6>
+          <h6>
+            Masa Jabatan : {{ jabatan.awal_jabatan }} -
+            {{ jabatan.akhir_jabatan }}
+          </h6>
         </div>
       </div>
     </div>
@@ -52,10 +63,18 @@
       <h2>Struktur Organisasi</h2>
       <div class="row mt-5">
         <div class="col-md-6">
-          <img src="/assets/img/struc_org1.jpeg" alt="struc_org1" class="img-fluid">
+          <img
+            src="/assets/img/struc_org1.jpeg"
+            alt="struc_org1"
+            class="img-fluid"
+          />
         </div>
         <div class="col-md-6">
-          <img src="/assets/img/struc_org2.jpeg" alt="struc_org1" class="img-fluid">
+          <img
+            src="/assets/img/struc_org2.jpeg"
+            alt="struc_org1"
+            class="img-fluid"
+          />
         </div>
       </div>
     </div>

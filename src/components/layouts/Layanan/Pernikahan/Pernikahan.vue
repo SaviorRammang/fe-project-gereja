@@ -27,7 +27,7 @@
         <iframe
           width="400"
           height="315"
-          src="https://www.youtube.com/embed/tgbNymZ7vqY"
+          src="https://www.youtube.com/embed/vSxiUbHBkyo"
         >
         </iframe>
       </div>
@@ -169,7 +169,9 @@
           />
         </div>
         <div class="mb-4">
-          <label for="pendeta_id" class="form-label fw-bold">Pendeta</label>
+          <label for="pendeta_id" class="form-label fw-bold"
+            >Nama Pendeta</label
+          >
           <select
             class="form-select"
             name="pendeta_id"

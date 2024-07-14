@@ -180,7 +180,9 @@
           </select>
         </div>
         <div class="mb-4">
-          <label for="pendeta_id" class="form-label fw-bold">Pendeta</label>
+          <label for="pendeta_id" class="form-label fw-bold"
+            >Nama Pendeta</label
+          >
           <select
             class="form-select"
             name="pendeta_id"
@@ -199,7 +201,7 @@
           </select>
         </div>
         <div class="mb-4">
-          <label for="nama" class="form-label fw-bold">Nama</label>
+          <label for="nama" class="form-label fw-bold">Nama Lengkap</label>
           <input
             type="text"
             class="form-control"
