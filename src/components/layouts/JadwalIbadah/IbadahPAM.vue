@@ -23,7 +23,7 @@
 
   <!-- Blog Section - Blog Page -->
   <div class="container my-5" data-aos="fade-up" data-aos-delay="100">
-    <h5 class="form-label fw-bold">Cari Ibadah PAM</h5>
+    <!-- <h5 class="form-label fw-bold">Cari Ibadah PAM</h5>
     <form @submit.prevent="searchEvent" class="row mb-5 mt-3 text-center align-items-center">
       <div class="mb-4 col-md-4">
         <input type="text" class="form-control" name="tgl_awal" id="tgl_awal" v-model="search" />
@@ -31,14 +31,24 @@
       <div class="mb-4 col-md-1">
         <button type="submit" class="btn btn-danger">Cari</button>
       </div>
-    </form>
+    </form> -->
     <div class="row posts-list">
       <div class="col-md-4" v-for="(pam, index) in pams" :key="index">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Sektor {{ index + 1 }}</h5>
-            <div class="list-group" v-for="(skt, index) in pam.sektor" :key="index">
-              <li to="#" class="list-group-item list-group-item-action mt-2" aria-current="true">Rayon {{ skt.rayon.nomor_rayon }}</li>
+            <div
+              class="list-group"
+              v-for="(skt, index) in pam.sektor"
+              :key="index"
+            >
+              <li
+                to="#"
+                class="list-group-item list-group-item-action mt-2"
+                aria-current="true"
+              >
+                Rayon {{ skt.rayon.nomor_rayon }}
+              </li>
             </div>
             <table class="mt-3">
               <tr>
