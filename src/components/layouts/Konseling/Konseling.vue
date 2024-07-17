@@ -90,7 +90,25 @@
             v-model="data.pesan"
           ></textarea>
         </div>
+        <div class="mb-4">
+          <p style="font-weight: bold">Pemberitahuan :</p>
+          <ul>
+            <li>
+              1. Setiap masing - masing konselor menerima konseling maksimal 5
+              orang dalam sehari.
+            </li>
+            <li>
+              2. Setiap jemaat hanya dapat melakukan konseling sebanyak 1 kali
+              dalam sehari.
+            </li>
+            <li>
+              3. Jadwal Konseling dapat di reschedule atau dijadwalkan ulang
+              oleh konselor, apabila konselor mengalami kesibukan atau sakit.
+            </li>
+          </ul>
+        </div>
       </div>
+
       <div class="col-12 d-flex justify-content-end">
         <button
           type="submit"
