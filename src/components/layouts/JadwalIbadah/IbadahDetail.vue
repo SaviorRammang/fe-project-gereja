@@ -128,20 +128,21 @@ export default {
 
   methods: {
     formatPenambahan(penambahan) {
+      // digunakan untuk memformat dan mengelompokkan data penambahan yang dikategorikan sebagai majelis dan persembahan
       let majelis = [];
       let persembahan = [];
 
       penambahan.forEach((item) => {
         // melakukan perulangan
         if (item.jenis_penambahan === "Majelis") {
-          majelis.push(`Rayon ${item.rayon.nomor_rayon}`);
+          majelis.push(`Rayon ${item.rayon.nomor_rayon}`); // jika item jenis penambahannya adalah majelis, maka nomor rayon dari item tersebut akan di tambahkan ke dalam array majelis
         } else if (item.jenis_penambahan === "Persembahan") {
           persembahan.push(`Rayon ${item.rayon.nomor_rayon}`);
         }
       });
 
-      this.formattedPenambahan.majelis = majelis.join(", ");
-      this.formattedPenambahan.persembahan = persembahan.join(", ");
+      this.formattedPenambahan.majelis = majelis.join(", "); // menggabungkan semua elemen dalam array majelis menjadi satu string, dan dipisahkan dengan tanda koma (,)
+      this.formattedPenambahan.persembahan = persembahan.join(", "); // menggabungkan semua elemen dalam array persembahan menjadi satu string, dan dipisahkan dengan tanda koma (,)
     },
 
     formatPetugas(petugas) {
@@ -156,8 +157,8 @@ export default {
         }
       });
 
-      this.formattedPetugas.kantoria = kantoria.join(", ");
-      this.formattedPetugas.infokus = infokus.join(", ");
+      this.formattedPetugas.kantoria = kantoria.join(", "); // menggabungkan semua elemen dalam array kantoria menjadi satu string, dan dipisahkan dengan tanda koma (,)
+      this.formattedPetugas.infokus = infokus.join(", "); // menggabungkan semua elemen dalam array infokus menjadi satu string, dan dipisahkan dengan tanda koma (,)
     },
   },
 

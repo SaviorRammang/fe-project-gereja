@@ -170,7 +170,7 @@
         </div>
         <div class="mb-4">
           <label for="pendeta_id" class="form-label fw-bold"
-            >Nama Pendeta</label
+            >Dinikahkan Oleh</label
           >
           <select
             class="form-select"

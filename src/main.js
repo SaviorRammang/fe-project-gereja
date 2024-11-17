@@ -76,16 +76,17 @@ const router = VueRouter.createRouter({
   history: VueRouter.createWebHashHistory(),
   routes,
 });
-
-router.beforeEach((to, from, next) => {
-  const token = localStorage.getItem("token");
+// fungsi global guard yang akan dieksekusi setiap kali navigasi terjadi. 
+// to => halaman tujuan, from => halaman asal(halaman sebelumnya), next => fungsi untuk melanjutkan navigasi
+router.beforeEach((to, from, next) => { // digunakan untuk mengelola akses ke halaman halaman tertentu berdasarkan status autentikasi pengguna.
+  const token = localStorage.getItem("token"); // digunakan untuk mengambil token. 
 
   // Jika user sudah login dan mencoba mengakses halaman login atau register, arahkan ke halaman utama
   if ((to.path === "/login" || to.path === "/register") && token) {
     next("/");
   }
   // Jika halaman memerlukan autentikasi dan tidak ada token, arahkan ke halaman login
-  else if (to.matched.some((record) => record.meta.requiresAuth) && !token) {
+  else if (to.matched.some((record) => record.meta.requiresAuth) && !token) { // record.meta.requiresAuth adalah properti yang ditetapkan pada rute untuk menandai bahwa halaman tersebut memerlukan autentikasi.
     next("/login");
   } else {
     next();
