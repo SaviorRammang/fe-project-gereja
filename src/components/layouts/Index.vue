@@ -472,7 +472,7 @@
               <div class="info-item" data-aos="fade" data-aos-delay="300">
                 <i class="bi bi-telephone"></i>
                 <h3>Hubungi Kami</h3>
-                <p>(0951) 325767</p>
+                <p>081344422868</p>
               </div>
             </div>
             <!-- End Info Item -->
