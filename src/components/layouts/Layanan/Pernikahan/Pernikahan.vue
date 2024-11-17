@@ -446,7 +446,7 @@
           <p style="font-weight: bold">Persyaratan :</p>
           <ul>
             <li>
-              1. Surat keterangan persetujuan dari rang tua calon pengantin
+              1. Surat keterangan persetujuan dari orang tua calon pengantin
               (materai 6000).
             </li>
             <li>2. Surat keterangan dari jemaat asal (untuk jemaat luar).</li>
