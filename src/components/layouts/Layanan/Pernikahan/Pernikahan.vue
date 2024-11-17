@@ -452,7 +452,7 @@
             <li>2. Surat keterangan dari jemaat asal (untuk jemaat luar).</li>
             <li>3. Foto copy surat akte kelahiran calon pengantin.</li>
             <li>4. Foto copy surat baptis calon pengantin.</li>
-            <li>5. Foto copy surat sidi calong pengantin.</li>
+            <li>5. Foto copy surat sidi calon pengantin.</li>
             <li>6. Foto gandeng 4 x 6 cm = 2 lembar.</li>
             <li>
               7. Administrasi :
