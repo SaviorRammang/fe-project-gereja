@@ -481,7 +481,7 @@
               <div class="info-item" data-aos="fade" data-aos-delay="400">
                 <i class="bi bi-envelope"></i>
                 <h3>Email Us</h3>
-                <p>gkikasihperumnas@gmail.com</p>
+                <p>gkikasihp@gmail.com</p>
               </div>
             </div>
             <!-- End Info Item -->
